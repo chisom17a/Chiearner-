@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fund Wallet - VTU Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar dashboard-nav">
+    <div class="container">
+      <div class="nav-brand">
+        <h1>VTU Hub</h1>
+      </div>
+      <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" id="logoutBtn">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-menu">
+        <a href="dashboard.html" class="menu-item">
+          <span class="icon">🏠</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="airtime.html" class="menu-item">
+          <span class="icon">📱</span>
+          <span>Buy Airtime</span>
+        </a>
+        <a href="data.html" class="menu-item">
+          <span class="icon">📶</span>
+          <span>Buy Data</span>
+        </a>
+        <a href="electricity.html" class="menu-item">
+          <span class="icon">💡</span>
+          <span>Electricity</span>
+        </a>
+        <a href="cabletv.html" class="menu-item">
+          <span class="icon">📺</span>
+          <span>Cable TV</span>
+        </a>
+        <a href="transactions.html" class="menu-item">
+          <span class="icon">📊</span>
+          <span>Transactions</span>
+        </a>
+        <a href="profile.html" class="menu-item">
+          <span class="icon">👤</span>
+          <span>Profile</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-header">
+        <h2>Fund Wallet</h2>
+        <p>Add money to your VTU Hub wallet</p>
+      </div>
+
+      <div class="service-form-container">
+        <div class="balance-card">
+          <div class="balance-info">
+            <h3>Current Balance</h3>
+            <p class="balance-amount">₦<span id="balance">0.00</span></p>
+          </div>
+        </div>
+
+        <form id="fundWalletForm" class="service-form">
+          <div class="form-group">
+            <label for="amount">Amount to Fund (₦)</label>
+            <input type="number" id="amount" name="amount" min="100" placeholder="1000" required>
+          </div>
+
+          <div class="quick-amounts">
+            <button type="button" class="quick-amount-btn" data-amount="1000">₦1,000</button>
+            <button type="button" class="quick-amount-btn" data-amount="2000">₦2,000</button>
+            <button type="button" class="quick-amount-btn" data-amount="5000">₦5,000</button>
+            <button type="button" class="quick-amount-btn" data-amount="10000">₦10,000</button>
+          </div>
+
+          <div class="form-group">
+            <label for="paymentMethod">Payment Method</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+              <option value="">Choose payment method</option>
+              <option value="card">Card Payment</option>
+              <option value="transfer">Bank Transfer</option>
+              <option value="ussd">USSD</option>
+            </select>
+          </div>
+
+          <div id="formMessage" class="form-message"></div>
+
+          <button type="submit" class="btn-primary btn-large btn-block">Proceed to Payment</button>
+        </form>
+
+        <div class="payment-info">
+          <h3>Payment Information</h3>
+          <p>Your wallet will be credited instantly after payment confirmation.</p>
+          <p>Minimum funding amount: ₦100</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="wallet.js"></script>
+</body>
+</html>

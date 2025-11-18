@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electricity Bills - VTU Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar dashboard-nav">
+    <div class="container">
+      <div class="nav-brand">
+        <h1>VTU Hub</h1>
+      </div>
+      <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" id="logoutBtn">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-menu">
+        <a href="dashboard.html" class="menu-item">
+          <span class="icon">🏠</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="airtime.html" class="menu-item">
+          <span class="icon">📱</span>
+          <span>Buy Airtime</span>
+        </a>
+        <a href="data.html" class="menu-item">
+          <span class="icon">📶</span>
+          <span>Buy Data</span>
+        </a>
+        <a href="electricity.html" class="menu-item active">
+          <span class="icon">💡</span>
+          <span>Electricity</span>
+        </a>
+        <a href="cabletv.html" class="menu-item">
+          <span class="icon">📺</span>
+          <span>Cable TV</span>
+        </a>
+        <a href="transactions.html" class="menu-item">
+          <span class="icon">📊</span>
+          <span>Transactions</span>
+        </a>
+        <a href="profile.html" class="menu-item">
+          <span class="icon">👤</span>
+          <span>Profile</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-header">
+        <h2>Pay Electricity Bill</h2>
+        <p>Quick and easy electricity bill payment</p>
+      </div>
+
+      <div class="service-form-container">
+        <form id="electricityForm" class="service-form">
+          <div class="form-group">
+            <label for="disco">Select DISCO</label>
+            <select id="disco" name="disco" required>
+              <option value="">Choose DISCO</option>
+              <option value="ekedc">EKEDC - Eko Electricity</option>
+              <option value="ikedc">IKEDC - Ikeja Electric</option>
+              <option value="aedc">AEDC - Abuja Electricity</option>
+              <option value="phed">PHED - Port Harcourt Electricity</option>
+              <option value="ibedc">IBEDC - Ibadan Electricity</option>
+              <option value="kaedco">KAEDCO - Kaduna Electric</option>
+              <option value="kedco">KEDCO - Kano Electricity</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="meterType">Meter Type</label>
+            <select id="meterType" name="meterType" required>
+              <option value="">Choose meter type</option>
+              <option value="prepaid">Prepaid</option>
+              <option value="postpaid">Postpaid</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="meterNumber">Meter Number</label>
+            <input type="text" id="meterNumber" name="meterNumber" placeholder="Enter meter number" required>
+          </div>
+
+          <div class="form-group">
+            <label for="amount">Amount (₦)</label>
+            <input type="number" id="amount" name="amount" min="500" placeholder="1000" required>
+          </div>
+
+          <div class="form-summary">
+            <div class="summary-item">
+              <span>Amount:</span>
+              <span id="summaryAmount">₦0</span>
+            </div>
+            <div class="summary-item">
+              <span>Wallet Balance:</span>
+              <span id="walletBalance">₦0.00</span>
+            </div>
+          </div>
+
+          <div id="formMessage" class="form-message"></div>
+
+          <button type="submit" class="btn-primary btn-large btn-block">Pay Bill</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="services.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - VTU Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar dashboard-nav">
+    <div class="container">
+      <div class="nav-brand">
+        <h1>VTU Hub</h1>
+      </div>
+      <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" id="logoutBtn">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-menu">
+        <a href="dashboard.html" class="menu-item active">
+          <span class="icon">🏠</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="airtime.html" class="menu-item">
+          <span class="icon">📱</span>
+          <span>Buy Airtime</span>
+        </a>
+        <a href="data.html" class="menu-item">
+          <span class="icon">📶</span>
+          <span>Buy Data</span>
+        </a>
+        <a href="electricity.html" class="menu-item">
+          <span class="icon">💡</span>
+          <span>Electricity</span>
+        </a>
+        <a href="cabletv.html" class="menu-item">
+          <span class="icon">📺</span>
+          <span>Cable TV</span>
+        </a>
+        <a href="transactions.html" class="menu-item">
+          <span class="icon">📊</span>
+          <span>Transactions</span>
+        </a>
+        <a href="profile.html" class="menu-item">
+          <span class="icon">👤</span>
+          <span>Profile</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="dashboard-header">
+        <h2>Welcome, <span id="userName">User</span></h2>
+        <p>Manage your VTU services from your dashboard</p>
+      </div>
+
+      <div class="balance-card">
+        <div class="balance-info">
+          <h3>Wallet Balance</h3>
+          <p class="balance-amount">₦<span id="balance">0.00</span></p>
+        </div>
+        <button class="btn-primary" onclick="location.href='wallet.html'">Fund Wallet</button>
+      </div>
+
+      <div class="quick-actions">
+        <h3>Quick Actions</h3>
+        <div class="services-grid">
+          <div class="service-card clickable" onclick="location.href='airtime.html'">
+            <div class="service-icon">📱</div>
+            <h4>Buy Airtime</h4>
+            <p>Recharge for all networks</p>
+          </div>
+          <div class="service-card clickable" onclick="location.href='data.html'">
+            <div class="service-icon">📶</div>
+            <h4>Buy Data</h4>
+            <p>Affordable data bundles</p>
+          </div>
+          <div class="service-card clickable" onclick="location.href='electricity.html'">
+            <div class="service-icon">💡</div>
+            <h4>Pay Electricity</h4>
+            <p>All DISCOs supported</p>
+          </div>
+          <div class="service-card clickable" onclick="location.href='cabletv.html'">
+            <div class="service-icon">📺</div>
+            <h4>Cable TV</h4>
+            <p>DSTV, GOTV, Startimes</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="recent-transactions">
+        <h3>Recent Transactions</h3>
+        <div class="transaction-list">
+          <div class="transaction-item">
+            <div class="transaction-info">
+              <p class="transaction-title">No transactions yet</p>
+              <p class="transaction-date">Start by making your first purchase</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

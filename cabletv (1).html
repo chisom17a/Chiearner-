@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cable TV - VTU Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar dashboard-nav">
+    <div class="container">
+      <div class="nav-brand">
+        <h1>VTU Hub</h1>
+      </div>
+      <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" id="logoutBtn">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-menu">
+        <a href="dashboard.html" class="menu-item">
+          <span class="icon">🏠</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="airtime.html" class="menu-item">
+          <span class="icon">📱</span>
+          <span>Buy Airtime</span>
+        </a>
+        <a href="data.html" class="menu-item">
+          <span class="icon">📶</span>
+          <span>Buy Data</span>
+        </a>
+        <a href="electricity.html" class="menu-item">
+          <span class="icon">💡</span>
+          <span>Electricity</span>
+        </a>
+        <a href="cabletv.html" class="menu-item active">
+          <span class="icon">📺</span>
+          <span>Cable TV</span>
+        </a>
+        <a href="transactions.html" class="menu-item">
+          <span class="icon">📊</span>
+          <span>Transactions</span>
+        </a>
+        <a href="profile.html" class="menu-item">
+          <span class="icon">👤</span>
+          <span>Profile</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-header">
+        <h2>Cable TV Subscription</h2>
+        <p>Renew your cable TV subscription instantly</p>
+      </div>
+
+      <div class="service-form-container">
+        <form id="cableTVForm" class="service-form">
+          <div class="form-group">
+            <label for="provider">Select Provider</label>
+            <select id="provider" name="provider" required>
+              <option value="">Choose provider</option>
+              <option value="dstv">DSTV</option>
+              <option value="gotv">GOTV</option>
+              <option value="startimes">Startimes</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="package">Select Package</label>
+            <select id="package" name="package" required>
+              <option value="">Choose package</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="smartcard">Smartcard/IUC Number</label>
+            <input type="text" id="smartcard" name="smartcard" placeholder="Enter smartcard number" required>
+          </div>
+
+          <div class="form-summary">
+            <div class="summary-item">
+              <span>Amount:</span>
+              <span id="summaryAmount">₦0</span>
+            </div>
+            <div class="summary-item">
+              <span>Wallet Balance:</span>
+              <span id="walletBalance">₦0.00</span>
+            </div>
+          </div>
+
+          <div id="formMessage" class="form-message"></div>
+
+          <button type="submit" class="btn-primary btn-large btn-block">Subscribe</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="services.js"></script>
+</body>
+</html>
